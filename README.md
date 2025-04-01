@@ -10,6 +10,7 @@ A Python tool to parse AWS VPC flow logs, apply tags based on port and protocol 
 - [Requirements](#requirements)
 - [Installation Instructions](#installation-instructions)
 - [Usage Instructions](#usage-instructions)
+- [Testing & Validation](#tesing-&-validation)
 - [Input Format Assumptions](#input-format-assumptions)
 - [Documentation](#documentation)
 - [Visuals](#visuals)
@@ -83,8 +84,24 @@ python main.py sample_data/sample_logs.txt sample_data/tag_lookup.csv
 
 ---
 
-## 📚 Documentation
-The code is fully documented with inline docstrings. For assumptions and design notes, refer to the README.
+## ✅ Testing & Validation
+
+Test cases:
+
+### 1. Reordered/Extra Fields
+Tested log entries with additional or noisy fields at the end. ✅ Verified the parser correctly extracted the `dstport` and `protocol` regardless of extra tokens.
+
+### 2. Malformed Input Lines
+Tested flow logs with missing required fields to check for safe failure. ✅ Skipped incomplete or malformed lines without crashing.
+
+### 3. Case-Insensitive Matching
+Lookup table used mixed-case protocols (e.g., `TCP`, `Udp`). ✅ The program normalized casing and matched protocols correctly.
+
+### 4. Tag Conflict Handling
+The same port was used with both `tcp` and `udp` protocols mapped to different tags. ✅ Tag assignment was accurate based on both port and protocol.
+
+### 5. Empty Input Files
+Tested with empty flow log and tag mapping files. ✅ Output files were generated correctly
 
 ---
 
