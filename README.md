@@ -61,7 +61,7 @@ python main.py path/to/your_flow_logs.txt path/to/your_tag_lookup.csv
 To test with the provided sample data:
 
 ```bash
-python main.py sample_data/sample_logs.txt sample_data/tag_lookup.csv
+python main.py sample_data/sample_logs.txt sample_data/sample_tag_lookup.csv
 ```
 
 > The `output/` folder will be created automatically if it doesn’t exist. Results are written to:
