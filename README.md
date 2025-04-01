@@ -14,11 +14,7 @@ A Python tool to parse AWS VPC flow logs, apply semantic tags based on port/prot
 - [Documentation](#documentation)
 - [Visuals](#visuals)
 - [Support](#support)
-- [Project Roadmap](#project-roadmap)
-- [Project Status](#project-status)
-- [Contribution Guidelines](#contribution-guidelines)
 - [Acknowledgments](#acknowledgments)
-- [License](#license)
 
 ---
 
