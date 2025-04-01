@@ -1,6 +1,6 @@
 # 🔒 Illumio Flow Log Tagger
 
-A Python tool to parse AWS VPC flow logs, apply semantic tags based on port/protocol mappings, and output summary reports. Built as part of a technical assessment for Illumio.
+A Python tool to parse AWS VPC flow logs, apply tags based on port and protocol mappings, and output summary reports.
 
 ---
 
@@ -19,13 +19,11 @@ A Python tool to parse AWS VPC flow logs, apply semantic tags based on port/prot
 ---
 
 ## 📝 Project Description
-Illumio Flow Log Tagger reads AWS VPC flow logs and tags each line based on a custom port/protocol lookup table. It then outputs:
-- A count of tag occurrences
-- A count of port/protocol combinations
+Illumio Flow Log Tagger reads AWS VPC flow logs and tags each line based on a port/protocol lookup table. It then outputs:
+- A count of each tag occurrence
+- A count of unique port/protocol combinations
 
-This allows users to quickly understand traffic patterns and tag distributions in a structured, readable way.
-
-> ⚠️ While the example in this repository uses files located in the `sample_data/` folder, the program works with **any compatible `.txt` and `.csv` file**. Simply provide the correct file paths when executing the script.
+> ⚠️ Although the example in this repository uses files located in the `sample_data/` folder, the program works with **any compatible `.txt` and `.csv` file**. You just have to provide the correct file paths when executing the script.
 
 ---
 
@@ -37,7 +35,6 @@ This allows users to quickly understand traffic patterns and tag distributions i
 
 ## ✅ Requirements
 - Python 3.6 or higher
-- Basic understanding of AWS VPC flow log structure (version 2)
 - ASCII or UTF-8 encoded input files
 
 ---
